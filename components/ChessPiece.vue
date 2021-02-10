@@ -62,9 +62,9 @@ export default {
   getVar(var)
       unquote("var(--vs-"+var+")")
  .chess_piece 
-    width: 300px;
-    margin-right: 16px;
-    margin-bottom: 16px;
+    width: 300px
+    margin-right: 16px
+    margin-bottom: 16px
     cursor: pointer;
   .con-footer
     display flex
