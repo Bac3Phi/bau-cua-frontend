@@ -1,20 +1,25 @@
 <template>
   <div>
+    <side-bar />
     <Nuxt />
   </div>
 </template>
+<script>
+import SideBar from "../components/SideBar.vue";
+export default {
+  components: { SideBar }
+};
+</script>
 
 <style>
+body{
+  background: url(https://image.freepik.com/free-vector/seamless-pattern-with-chinese-new-year-zodiac-year-ox-sign-with-asian-elements_38689-991.jpg);
+  background-repeat: repeat;
+  background-size: auto;
+}
 html {
-  font-family:
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
+  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
