@@ -54,7 +54,7 @@
       />
       <vs-input
         @keypress.enter="editActive = false"
-        v-if="editProp == 'animal'"
+        v-if="editProp == 'money'"
         v-model="edit[editProp]"
       />
       <vs-select
