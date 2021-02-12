@@ -9,8 +9,10 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@nuxtjs/firebase": "^7.4.1",
     "boxicons": "^2.0.7",
     "core-js": "^3.8.3",
+    "firebase": "^8.2.6",
     "loader-utils": "^2.0.0",
     "nuxt": "^2.14.12",
     "stylus": "^0.54.8",

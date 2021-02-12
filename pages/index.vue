@@ -6,7 +6,7 @@
             <chess-pieces />
           </vs-col>
           <vs-col :sm="12" :w="5">
-            <result-timer />
+            <!-- <result-timer /> -->
             <result-table />
           </vs-col>
         </vs-row>
