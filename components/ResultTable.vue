@@ -1,6 +1,6 @@
 <template>
 <div style="background: white; margin-bottom: 16px; padding: 16px; border-radius: 8px">
-  <vs-button @click="handleCreateUser">Thêm người đặt</vs-button>
+  <vs-button @click="handleCreateUser" >Thêm người đặt</vs-button>
     <vs-table>
       <template #thead>
         <vs-tr>
@@ -15,6 +15,9 @@
           </vs-th>
           <vs-th>
             Money
+          </vs-th>
+          <vs-th>
+            Chức năng
           </vs-th>
         </vs-tr>
       </template>
@@ -41,6 +44,9 @@
           >
             {{ tr.money }}
           </vs-td>
+          <vs-td @click="handleDeleteClick(tr)">
+            Xóa
+          </vs-td>
         </vs-tr>
       </template>
     </vs-table>
@@ -56,6 +62,8 @@
         @keypress.enter="editActive = false"
         v-if="editProp == 'money'"
         v-model="edit[editProp]"
+        type="number"
+        :step="1000"
       />
       <vs-select
         @change="editActive = false"
@@ -102,6 +110,11 @@ export default {
         animal: "",
         money: ""
       },)
+    },
+    handleDeleteClick(data) {
+      this.users = this.users.filter((item) => {
+        return item.id !== data.id
+      })
     }
   },
   computed: {
